@@ -3,15 +3,20 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 // import '../index.css'
 import "./index.css"; // Ensure this is imported globally
-// import '../dist/output.css';  // Ensure this path matches your project structure
+// import Login from './components/Login';
+import './output.css';  // Ensure this path matches your project structure
+import FAQSection from './components/FAQSection';
 import AboutUsPage from './components/About';
 import Contact from './components/Contact';
 import Home_page from './components/Home_page';
+import ProductDetails from './components/Product_Details';
 import Blogs from './components/Blogs';
 import Edit_Profile from './components/Edit_Profile';
-import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
+import Login from './components/Login';
 import ExploreCategories from './components/Explore_cats';
 import Layout from './components/Layout';
+import NewArrivals from './components/New_arrivals_bar';
 import CartPage from './components/Cart_Page';
 import ProductPage from './components/Buy_Product';
 import 'material-icons/iconfont/material-icons.css';
@@ -38,10 +43,12 @@ const router = createBrowserRouter(
     <Route path='orders' element={<Orders />} />
     <Route path='ongoing-orders' element={<OngoingOrders />} />
     <Route path='users' element={<Users />} />
+    <Route path='product_detail' element={<ProductDetails/>}></Route>
     <Route path='contact' element={<Contact />}></Route>
     <Route path='about' element={<AboutUsPage />}></Route>
     <Route path='user_profile' element={<Blogs />}></Route>
     <Route path='edit_profile' element={<Edit_Profile />}></Route>
+    <Route path='faqs' element={<FAQSection />}></Route>
     <Route path='categories' element={<ExploreCategories />}></Route>
     <Route index element={<Home_page />}></Route>
     <Route path='home' element={<Home_page/>}></Route>
