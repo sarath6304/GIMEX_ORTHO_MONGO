@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client'
 // import '../index.css'
 import "./index.css"; // Ensure this is imported globally
 // import Login from './components/Login';
-import '../dist/output.css';  // Ensure this path matches your project structure
+// import '../dist/output.css';  // Ensure this path matches your project structure
 import FAQSection from './components/FAQSection';
 import AboutUsPage from './components/About';
 import Contact from './components/Contact';
