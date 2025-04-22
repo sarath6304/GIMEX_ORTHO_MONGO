@@ -7,7 +7,6 @@
     "dev": "vite",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "react-scripts start",
     "build": "vite build",
     "tailwind": "npx tailwindcss -i ./src/index.css -o ./dist/output.css --watch"
   },
