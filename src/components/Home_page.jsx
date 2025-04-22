@@ -4,7 +4,6 @@ import { Squares2X2Icon, PuzzlePieceIcon, BoltIcon, BanknotesIcon } from '@heroi
 import PromoSection from './Home_Promo_Section';
 import NewArrivals from './New_arrivals_bar';
 import ExploreCategories from './Explore_cats';
-import Hero from './Hero';
 import PraiseSection from './Praises';
 import CustomerReviews from './Customer_Review';
 
