@@ -44,7 +44,7 @@ export default function ProductPage() {
           <div className="w-full md:w-1/2">
             {/* Product Title */}
             <h1 className="text-2xl md:text-3xl font-bold mb-3">
-              Success Ortho Powder
+              GIMEX Ortho Plus
             </h1>
 
             {/* Pricing */}
