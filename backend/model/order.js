@@ -1,5 +1,3 @@
-// models/Order.js
-
 const mongoose = require('mongoose');
 
 const orderSchema = new mongoose.Schema({
@@ -18,17 +16,16 @@ const orderSchema = new mongoose.Schema({
       quantity: Number,
     }
   ],
-  deliveryAddress: [
-    {
-      name: { type: String, required: true },
-      mobile: { type: String, required: true },
-      email: { type: String, required: true },
-      address: { type: String, required: true }, // Full street address
-      city: { type: String, required: true },
-      state: { type: String, required: true },
-      pincode: { type: String, required: true }
-    }
-  ],
+  deliveryAddress: {
+    name: { type: String, required: true },
+    mobile: { type: String, required: true },
+    email: { type: String, required: true },
+    address: { type: String, required: true },
+    city: { type: String, required: true },
+    state: { type: String, required: true },
+    pincode: { type: String, required: true }
+  }
+  ,
   deliveryFee: {
     type: Number,
     default: 0
