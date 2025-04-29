@@ -93,13 +93,28 @@ const getAllUsers = async (req, res) => {
         });
     }
 };
-
-
-
+const getAllOrders = async (req, res) => {
+    try {
+        console.log('Get all orders request received');
+        const orders = await adminService.getAllOrders();
+        res.status(200).json({
+            success: true,
+            count: orders.length,
+            data: orders
+        });
+    } catch (error) {
+        console.error('Get orders error:', error);
+        res.status(500).json({
+            success: false,
+            message: error.message
+        });
+    }
+}
 module.exports = {
     addProduct,
     updateProduct,
     deleteProduct,
     getAllProducts,
-    getAllUsers
+    getAllUsers,
+    getAllOrders
 };

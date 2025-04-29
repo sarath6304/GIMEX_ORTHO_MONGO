@@ -27,7 +27,7 @@ router.put('/admin/products/:id', adminAuth, adminController.updateProduct);
 router.delete('/admin/products/:id', adminAuth, adminController.deleteProduct);
 router.get('/admin/products', adminAuth, adminController.getAllProducts);
 router.get('/admin/getallusers', adminAuth, adminController.getAllUsers);
-
+router.get('/admin/getallorders', adminAuth, adminController.getAllOrders);
 
 
 
