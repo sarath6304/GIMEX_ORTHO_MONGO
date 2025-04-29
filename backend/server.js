@@ -26,12 +26,20 @@ requiredEnvVars.forEach(varName => {
 connectDb();
 
 const app = express();
+const corsOptions = {
+  origin: 'http://localhost:3000',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+  optionsSuccessStatus: 200
+};
+
 
 //Middleware
 app.use(morgan('dev')); //logging middleware
 app.use(express.json()); //json middleware
 app.use(express.urlencoded({ extended: true })); //urlencoded middleware
-app.use(cors());
+app.use(cors(corsOptions)); //CORS middleware
+
 
 //Routes
 app.use('/api', routes); //use routes
