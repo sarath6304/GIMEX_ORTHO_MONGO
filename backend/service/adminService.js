@@ -1,4 +1,5 @@
 const Product = require('../model/product');
+const User = require('../model/user');
 
 // Add new product service
 const addProduct = async (productData) => {
@@ -61,11 +62,25 @@ const getAllProducts = async () => {
     }
 };
 
-
+const getAllUsers = async () => {
+    try {
+        console.log('Fetching all users');
+        const users = await User.find()
+            .select('-password') // Exclude password field
+            .sort({ createdAt: -1 }); // Sort by newest first
+        
+        console.log(`Found ${users.length} users`);
+        return users;
+    } catch (error) {
+        console.error('Error fetching users:', error);
+        throw new Error('Error fetching users');
+    }
+};
 
 module.exports = {
     addProduct,
     updateProduct,
     deleteProduct,
-    getAllProducts
+    getAllProducts,
+    getAllUsers
 };

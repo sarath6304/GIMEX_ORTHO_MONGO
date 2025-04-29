@@ -76,9 +76,30 @@ const getAllProducts = async (req, res) => {
     }
 };
 
+const getAllUsers = async (req, res) => {
+    try {
+        console.log('Get all users request received');
+        const users = await adminService.getAllUsers();
+        res.status(200).json({
+            success: true,
+            count: users.length,
+            data: users
+        });
+    } catch (error) {
+        console.error('Get users error:', error);
+        res.status(500).json({
+            success: false,
+            message: error.message
+        });
+    }
+};
+
+
+
 module.exports = {
     addProduct,
     updateProduct,
     deleteProduct,
-    getAllProducts
+    getAllProducts,
+    getAllUsers
 };
