@@ -32,7 +32,7 @@ const AdminRoute = () => {
         // Optional: Verify token with backend for extra security
         // This helps prevent token tampering or using expired tokens
         try {
-          const response = await fetch('http://localhost:5000/api/auth/verify-admin', {
+          const response = await fetch(`${import.meta.env.VITE_REACT_APP_API_URL}api/auth/verify-admin`, {
             headers: {
               'Authorization': `Bearer ${token}`
             }

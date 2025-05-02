@@ -58,7 +58,7 @@ export default function SignupPage() {
       setIsSubmitting(true);
       try {
         //here API call 
-        const response = await axios.post(`http://localhost:5000/api/auth/register`,{
+        const response = await axios.post(`${import.meta.env.VITE_REACT_APP_API_URL}api/auth/register`,{
           name: formData.name,
           email: formData.email,
           password: formData.password,
