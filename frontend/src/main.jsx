@@ -30,7 +30,7 @@ import Orders from './Pages/Orders';
 import Users from './Pages/Users';
 import OngoingOrders from './Pages/OngoinOrders';
 import AdminRoute from './Pages/Admin';
-import Sidebar from './Components/Sidebar';
+import Sidebar from './components/Sidebar';
 import AddProduct from './Pages/AddProduct';
 import AdminLogin from './Pages/AdminLogin';
 
