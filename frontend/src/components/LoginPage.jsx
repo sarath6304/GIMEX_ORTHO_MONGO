@@ -33,15 +33,15 @@ export default function LoginPage() {
         localStorage.setItem('user',JSON.stringify(user));  
 
         console.log('Login successful:', user);
-
-        if(user.isAdmin === true) {
-        navigate('/admin/dashboard');
-      } else if( user.isAdmin === false) {
-
         navigate('/');
-      } else {
-        alert("Unknown role: access denied ");
-      } 
+
+      //   if(user.isAdmin === true) {
+      //   navigate('/admin/dashboard');
+      // } else if( user.isAdmin === false) {
+
+      // } else {
+      //   alert("Unknown role: access denied ");
+      // } 
       } else {
         console.error('Login failed:',response.data.message);
         alert(response.data.message);
@@ -89,7 +89,7 @@ export default function LoginPage() {
           <div className="space-y-1">
             <div className="flex justify-between">
               <label htmlFor="password" className="text-sm font-medium text-gray-700">Password</label>
-              <a href="#" className="text-sm font-medium text-blue-600 hover:text-blue-500">
+              <a href="forgetPassword" className="text-sm font-medium text-blue-600 hover:text-blue-500">
                 Forgot password?
               </a>
             </div>
@@ -132,7 +132,7 @@ export default function LoginPage() {
           
           <button
             type="submit"
-            onClick={()=> {navigate('/')}}
+            // onClick={()=> {navigate('/')}}
             className="w-full rounded-md bg-blue-600 px-4 py-2 font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
             Log In
